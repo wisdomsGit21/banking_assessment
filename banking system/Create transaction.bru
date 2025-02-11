@@ -1,0 +1,19 @@
+meta {
+  name: Create transaction
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3001/api/accounts/1/transactions
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "type": "WITHDRAWAL",
+    "amount": "4000",
+    "description": "testing the endpoint"
+  }
+}
